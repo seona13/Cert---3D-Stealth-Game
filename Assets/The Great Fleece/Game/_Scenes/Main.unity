@@ -12598,6 +12598,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 503904735}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &503904737 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95483830545951576, guid: 49be4103b035b448cb277ad3ac4b48f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 503904735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &516796220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17616,6 +17622,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -1392329400199990052, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
     value: {fileID: 2043896032}
+  - key: {fileID: 6971023664605960675, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
+    value: {fileID: 503904737}
   m_ExposedReferences:
     m_References:
     - cb4792c0c833c8e40807cc7a5ac3d29a: {fileID: 1106260935}
