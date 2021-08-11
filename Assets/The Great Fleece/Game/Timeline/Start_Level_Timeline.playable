@@ -2230,7 +2230,7 @@ MonoBehaviour:
     m_Start: 3.3
     m_ClipIn: 0
     m_Asset: {fileID: 3743459760271209024}
-    m_Duration: 4.516666666666665
+    m_Duration: 5.511541199684143
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2260,10 +2260,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Darren Side Shot
   - m_Version: 1
-    m_Start: 7.816666666666665
+    m_Start: 8.811541199684143
     m_ClipIn: 0
     m_Asset: {fileID: 5082644404702623880}
-    m_Duration: 5.833333333333336
+    m_Duration: 6.57179213364919
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2311,10 +2311,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Rise To Reveal
   - m_Version: 1
-    m_Start: 13.65
+    m_Start: 15.383333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 8938708687566707530}
-    m_Duration: 5.783333333333333
+    m_Duration: 3.8000000000000007
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2380,10 +2380,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Rise From Marble
   - m_Version: 1
-    m_Start: 19.433333333333334
+    m_Start: 19.183333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 9146050912245609565}
-    m_Duration: 2.5166666666666657
+    m_Duration: 3.3166666666666664
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2449,10 +2449,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Darren Underdressed
   - m_Version: 1
-    m_Start: 26
+    m_Start: 27.35449396452556
     m_ClipIn: 0
     m_Asset: {fileID: 3151398166908019740}
-    m_Duration: 5
+    m_Duration: 5.157574591692537
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2518,10 +2518,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Look At Guards
   - m_Version: 1
-    m_Start: 31
+    m_Start: 32.5120685562181
     m_ClipIn: 0
     m_Asset: {fileID: 4290935843492527472}
-    m_Duration: 5
+    m_Duration: 5.871264777115236
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2587,10 +2587,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Look At Security Cameras
   - m_Version: 1
-    m_Start: 36
+    m_Start: 38.38333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 6836265983345295255}
-    m_Duration: 5
+    m_Duration: 1.6666666666666643
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2656,25 +2656,61 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Darren Anything Else
   - m_Version: 1
-    m_Start: 45.11666666666667
+    m_Start: 48.1
     m_ClipIn: 0
     m_Asset: {fileID: 3715277827020132609}
-    m_Duration: 5.316666666666663
+    m_Duration: 4.100000000000001
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.4833333333333343
-    m_BlendOutDuration: 1.4499999999999957
+    m_BlendInDuration: 1.0666666666666629
+    m_BlendOutDuration: 1.1833333333333371
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2689,19 +2725,37 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Security Card
   - m_Version: 1
-    m_Start: 48.983333333333334
+    m_Start: 51.016666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 8331543977712789972}
-    m_Duration: 4.916666666666664
+    m_Duration: 2.6666666666666643
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 1.4499999999999957
+    m_BlendInDuration: 1.1833333333333371
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2740,10 +2794,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Look At Vault
   - m_Version: 1
-    m_Start: 53.9
+    m_Start: 53.68333333333333
     m_ClipIn: 0
     m_Asset: {fileID: 4739910878052096490}
-    m_Duration: 5
+    m_Duration: 8.550000000000004
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2809,10 +2863,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Darren End
   - m_Version: 1
-    m_Start: 21.95
+    m_Start: 22.5
     m_ClipIn: 0
     m_Asset: {fileID: -8896876079652730251}
-    m_Duration: 4.050000000000001
+    m_Duration: 4.85449396452556
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
@@ -2878,16 +2932,16 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM Darren Sees Guards
   - m_Version: 1
-    m_Start: 41
+    m_Start: 40.05
     m_ClipIn: 0
     m_Asset: {fileID: 2438006530867251783}
-    m_Duration: 5.600000000000001
+    m_Duration: 9.116666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 9029892071630088603}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 1.4833333333333343
+    m_BlendOutDuration: 1.0666666666666629
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -2914,7 +2968,25 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve: []
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
