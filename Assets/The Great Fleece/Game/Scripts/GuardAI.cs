@@ -6,9 +6,10 @@ using UnityEngine.AI;
 
 public class GuardAI : MonoBehaviour
 {
+	private NavMeshAgent _agent;
+	private Animator _anim;
 	[SerializeField]
 	private List<Transform> _waypoints;
-	private NavMeshAgent _agent;
 	[SerializeField]
 	private int _currentTarget;
 	private bool _reverse;
@@ -23,6 +24,12 @@ public class GuardAI : MonoBehaviour
 		{
 			Debug.LogError("Security Guard missing NavMeshAgent.");
 		}
+
+		_anim = GetComponent<Animator>();
+		if (_anim == null)
+		{
+			Debug.LogError("Security Guard missing Animator");
+		}
 	}
 
 
@@ -33,6 +40,15 @@ public class GuardAI : MonoBehaviour
 			_agent.SetDestination(_waypoints[_currentTarget].position);
 
 			float distance = Vector3.Distance(transform.position, _waypoints[_currentTarget].position);
+
+			if (distance < 1f && (_currentTarget == 0 || _currentTarget == _waypoints.Count - 1))
+			{
+				_anim.SetBool("isWalking", false);
+			}
+			else
+			{
+				_anim.SetBool("isWalking", true);
+			}
 
 			if (distance < 1f && _targetReached == false)
 			{
