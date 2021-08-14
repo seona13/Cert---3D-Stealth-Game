@@ -50219,6 +50219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 582604220}
+  _startCamera: {fileID: 959008484}
 --- !u!1 &2043971296
 GameObject:
   m_ObjectHideFlags: 0
