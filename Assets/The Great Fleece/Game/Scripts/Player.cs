@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
 
 			if (Physics.Raycast(ray, out RaycastHit hitInfo))
 			{
+				_anim.SetTrigger("tossCoin");
 				GameObject coin = Instantiate(_coinPrefab);
 				coin.transform.position = new Vector3(hitInfo.point.x, -1.8f, hitInfo.point.z);
 				_coinAvailable = false;
