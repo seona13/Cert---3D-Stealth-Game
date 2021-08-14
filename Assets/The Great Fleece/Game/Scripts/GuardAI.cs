@@ -54,7 +54,10 @@ public class GuardAI : MonoBehaviour
 			{
 				_targetReached = true;
 
-				StartCoroutine(WaitBeforeMoving());
+				if (_waypoints.Count > 1)
+				{
+					StartCoroutine(WaitBeforeMoving());
+				}
 			}
 		}
 	}
