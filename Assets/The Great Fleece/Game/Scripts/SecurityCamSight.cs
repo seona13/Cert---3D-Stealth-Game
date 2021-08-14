@@ -14,7 +14,6 @@ public class SecurityCamSight : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			other.gameObject.SetActive(false);
 			_cutscene.SetActive(true);
 		}
 	}
