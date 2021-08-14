@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 	private Vector3 _destination;
 	[SerializeField]
 	private GameObject _coinPrefab;
+	private bool _coinAvailable = true;
 
 
 
@@ -34,7 +35,7 @@ public class Player : MonoBehaviour
 	{
 		MovePlayer();
 
-		if (Input.GetMouseButtonDown(1))
+		if (Input.GetMouseButtonDown(1) && _coinAvailable)
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour
 			{
 				GameObject coin = Instantiate(_coinPrefab);
 				coin.transform.position = new Vector3(hitInfo.point.x, -1.8f, hitInfo.point.z);
+				_coinAvailable = false;
 			}
 		}
 	}
