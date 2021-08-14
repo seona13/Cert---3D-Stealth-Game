@@ -129,6 +129,7 @@ public class GuardAI : MonoBehaviour
 	void MoveToCoin(Vector3 coinPos)
 	{
 		_agent.SetDestination(coinPos);
+		_agent.stoppingDistance = 4f;
 		_coinTossed = true;
 		_coinPos = coinPos;
 	}
