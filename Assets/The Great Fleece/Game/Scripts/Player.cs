@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 	private NavMeshAgent _agent;
 	private Animator _anim;
 	private Vector3 _destination;
+	[SerializeField]
+	private GameObject _coinPrefab;
 
 
 
@@ -29,6 +31,23 @@ public class Player : MonoBehaviour
 
 
 	void Update()
+	{
+		MovePlayer();
+
+		if (Input.GetMouseButtonDown(1))
+		{
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+			if (Physics.Raycast(ray, out RaycastHit hitInfo))
+			{
+				GameObject coin = Instantiate(_coinPrefab);
+				coin.transform.position = new Vector3(hitInfo.point.x, -1.8f, hitInfo.point.z);
+			}
+		}
+	}
+
+
+	void MovePlayer()
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
