@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
+	public static event Action<Vector3> onCoinTossed;
+
 	private NavMeshAgent _agent;
 	private Animator _anim;
 	private Vector3 _destination;
@@ -44,6 +47,7 @@ public class Player : MonoBehaviour
 				GameObject coin = Instantiate(_coinPrefab);
 				coin.transform.position = new Vector3(hitInfo.point.x, -1.8f, hitInfo.point.z);
 				_coinAvailable = false;
+				onCoinTossed?.Invoke(hitInfo.point);
 			}
 		}
 	}

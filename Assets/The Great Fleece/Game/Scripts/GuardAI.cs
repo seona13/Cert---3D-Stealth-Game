@@ -14,7 +14,21 @@ public class GuardAI : MonoBehaviour
 	private int _currentTarget;
 	private bool _reverse;
 	private bool _targetReached;
+	private bool _coinTossed;
+	private Vector3 _coinPos;
 
+
+
+	void OnEnable()
+	{
+		Player.onCoinTossed += MoveToCoin;
+	}
+
+
+	void OnDisable()
+	{
+		Player.onCoinTossed -= MoveToCoin;
+	}
 
 
 	void Start()
@@ -35,7 +49,7 @@ public class GuardAI : MonoBehaviour
 
 	void Update()
 	{
-		if (_waypoints.Count > 0 && _waypoints[_currentTarget] != null)
+		if (_coinTossed == false && _waypoints.Count > 0 && _waypoints[_currentTarget] != null)
 		{
 			_agent.SetDestination(_waypoints[_currentTarget].position);
 
@@ -58,6 +72,19 @@ public class GuardAI : MonoBehaviour
 				{
 					StartCoroutine(WaitBeforeMoving());
 				}
+			}
+		}
+		else if (_coinTossed == true)
+		{
+			float distance = Vector3.Distance(transform.position, _coinPos);
+
+			if (distance < 4f)
+			{
+				_anim.SetBool("isWalking", false);
+			}
+			else
+			{
+				_anim.SetBool("isWalking", true);
 			}
 		}
 	}
@@ -96,5 +123,13 @@ public class GuardAI : MonoBehaviour
 		}
 
 		_targetReached = false;
+	}
+
+
+	void MoveToCoin(Vector3 coinPos)
+	{
+		_agent.SetDestination(coinPos);
+		_coinTossed = true;
+		_coinPos = coinPos;
 	}
 }
