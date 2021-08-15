@@ -16839,9 +16839,9 @@ NavMeshAgent:
   m_Acceleration: 7
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 5
   m_BaseOffset: 0
@@ -21918,6 +21918,12 @@ PlayableDirector:
     value: {fileID: 442765035}
   - key: {fileID: -832915774914873340, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
     value: {fileID: 1324054179}
+  - key: {fileID: -7923768705580957782, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
+    value: {fileID: 1361990653}
+  - key: {fileID: 7639318957659300590, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
+    value: {fileID: 582604216}
+  - key: {fileID: 7116291221092014984, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
+    value: {fileID: 775867231}
   m_ExposedReferences:
     m_References:
     - cb4792c0c833c8e40807cc7a5ac3d29a: {fileID: 1106260935}
