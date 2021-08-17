@@ -15,6 +15,11 @@ public class GrabKeycardActivation : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			_cutscene.SetActive(true);
+			Collider collider = GetComponent<Collider>();
+			if (collider != null)
+			{
+				collider.enabled = false;
+			}
 		}
 	}
 }
