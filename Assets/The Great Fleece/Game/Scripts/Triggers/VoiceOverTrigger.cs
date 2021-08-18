@@ -14,7 +14,7 @@ public class VoiceOverTrigger : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			AudioSource.PlayClipAtPoint(_clip, Camera.main.transform.position);
+			AudioManager.Instance.PlayVoiceOver(_clip);
 		}
 	}
 }
