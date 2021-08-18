@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 	}
 
 	[SerializeField]
-	public AudioSource _voiceOver;
+	private AudioSource _voiceOver;
 
 
 

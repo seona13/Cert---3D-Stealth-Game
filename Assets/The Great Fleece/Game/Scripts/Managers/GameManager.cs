@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 
 public class GameManager : MonoBehaviour
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	[SerializeField]
+	private PlayableDirector _introCutscene;
 	public bool HasCard { get; set; }
 
 
@@ -25,5 +28,14 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		_instance = this;
+	}
+
+
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.S))
+		{
+			_introCutscene.time = 60f;
+		}
 	}
 }

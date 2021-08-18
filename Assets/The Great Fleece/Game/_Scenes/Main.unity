@@ -21851,12 +21851,12 @@ PlayableDirector:
     value: {fileID: 939581259}
   - key: {fileID: 6545870248425489210, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
     value: {fileID: 386524714}
-  - key: {fileID: -5609408521720776159, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
-    value: {fileID: 940286539}
   - key: {fileID: 4390156018999091350, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
     value: {fileID: 770617975}
   - key: {fileID: 1395529249478942938, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
     value: {fileID: 582604216}
+  - key: {fileID: 7099512460385001773, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
+    value: {fileID: 940286539}
   m_ExposedReferences:
     m_References:
     - 72e0bb78504c6b34c8c1d15c5bd2d95e: {fileID: 1189946315}
@@ -23472,6 +23472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c215df8aa253b0468af04438db78983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _introCutscene: {fileID: 770617977}
 --- !u!4 &840022073
 Transform:
   m_ObjectHideFlags: 0
@@ -32039,6 +32040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _voiceOver: {fileID: 818320707}
+  _music: {fileID: 940286538}
 --- !u!1 &1276600326
 GameObject:
   m_ObjectHideFlags: 0
@@ -50873,8 +50875,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: -0.08223215, y: 0.8904478, z: 0.1783626, w: 0.41052085}
-  m_LocalPosition: {x: 3.9130092, y: 0.05837202, z: -62.691727}
+  m_LocalRotation: {x: 0.002671809, y: 0.9943189, z: -0.025667386, w: 0.10326711}
+  m_LocalPosition: {x: -1.49, y: 11.01, z: -119.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
