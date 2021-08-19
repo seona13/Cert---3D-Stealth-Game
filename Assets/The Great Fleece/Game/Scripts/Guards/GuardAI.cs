@@ -16,6 +16,8 @@ public class GuardAI : MonoBehaviour
 	private bool _targetReached;
 	private bool _coinTossed;
 	private Vector3 _coinPos;
+	[SerializeField]
+	private bool _reactToCoin = true;
 
 
 
@@ -49,32 +51,7 @@ public class GuardAI : MonoBehaviour
 
 	void Update()
 	{
-		if (_coinTossed == false && _waypoints.Count > 0 && _waypoints[_currentTarget] != null)
-		{
-			_agent.SetDestination(_waypoints[_currentTarget].position);
-
-			float distance = Vector3.Distance(transform.position, _waypoints[_currentTarget].position);
-
-			if (distance < 1f && (_currentTarget == 0 || _currentTarget == _waypoints.Count - 1))
-			{
-				_anim.SetBool("isWalking", false);
-			}
-			else
-			{
-				_anim.SetBool("isWalking", true);
-			}
-
-			if (distance < 1f && _targetReached == false)
-			{
-				_targetReached = true;
-
-				if (_waypoints.Count > 1)
-				{
-					StartCoroutine(WaitBeforeMoving());
-				}
-			}
-		}
-		else if (_coinTossed == true)
+		if (_reactToCoin && _coinTossed)
 		{
 			float distance = Vector3.Distance(transform.position, _coinPos);
 
@@ -85,6 +62,35 @@ public class GuardAI : MonoBehaviour
 			else
 			{
 				_anim.SetBool("isWalking", true);
+			}
+		}
+		else if (_reactToCoin == false || _coinTossed == false)
+		{
+			//Debug.Log("Patrolling: " + gameObject.name);
+			if (_waypoints.Count > 0 && _waypoints[_currentTarget] != null)
+			{
+				_agent.SetDestination(_waypoints[_currentTarget].position);
+
+				float distance = Vector3.Distance(transform.position, _waypoints[_currentTarget].position);
+
+				if (distance < 1f && (_currentTarget == 0 || _currentTarget == _waypoints.Count - 1))
+				{
+					_anim.SetBool("isWalking", false);
+				}
+				else
+				{
+					_anim.SetBool("isWalking", true);
+				}
+
+				if (distance < 1f && _targetReached == false)
+				{
+					_targetReached = true;
+
+					if (_waypoints.Count > 1)
+					{
+						StartCoroutine(WaitBeforeMoving());
+					}
+				}
 			}
 		}
 	}
@@ -128,9 +134,16 @@ public class GuardAI : MonoBehaviour
 
 	void MoveToCoin(Vector3 coinPos)
 	{
-		_agent.SetDestination(coinPos);
-		_agent.stoppingDistance = 4f;
-		_coinTossed = true;
-		_coinPos = coinPos;
+		if (_reactToCoin)
+		{
+			_agent.SetDestination(coinPos);
+			_agent.stoppingDistance = 4f;
+			_coinTossed = true;
+			_coinPos = coinPos;
+		}
+		else
+		{
+			return;
+		}
 	}
 }
