@@ -44,11 +44,7 @@ public class Player : MonoBehaviour
 
 			if (Physics.Raycast(ray, out RaycastHit hitInfo))
 			{
-				_anim.SetTrigger("tossCoin");
-				GameObject coin = Instantiate(_coinPrefab);
-				coin.transform.position = new Vector3(hitInfo.point.x, -1.8f, hitInfo.point.z);
-				_coinAvailable = false;
-				onCoinTossed?.Invoke(hitInfo.point);
+				StartCoroutine(TossCoin(hitInfo));
 			}
 		}
 	}
@@ -75,5 +71,20 @@ public class Player : MonoBehaviour
 		{
 			_anim.SetBool("isWalking", false);
 		}
+	}
+
+
+	IEnumerator TossCoin(RaycastHit hitInfo)
+	{
+		Vector3 target = hitInfo.point;
+		transform.LookAt(target);
+
+		_anim.SetTrigger("tossCoin");
+		yield return new WaitForSeconds(1f);
+
+		GameObject coin = Instantiate(_coinPrefab);
+		coin.transform.position = new Vector3(target.x, -1.8f, target.z);
+		_coinAvailable = false;
+		onCoinTossed?.Invoke(target);
 	}
 }
