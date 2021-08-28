@@ -8,12 +8,15 @@ public class GuardAI : MonoBehaviour
 {
 	private NavMeshAgent _agent;
 	private Animator _anim;
+	private AudioSource _audio;
 	[SerializeField]
 	private List<Transform> _waypoints;
 	[SerializeField]
 	private int _currentTarget;
 	private bool _reverse;
 	private bool _targetReached;
+	private bool _isWalking;
+	private float _timeSinceLastStepPlayed;
 	private bool _coinTossed;
 	private Vector3 _coinPos;
 	[SerializeField]
@@ -46,6 +49,12 @@ public class GuardAI : MonoBehaviour
 		{
 			Debug.LogError("Security Guard missing Animator");
 		}
+
+		_audio = GetComponent<AudioSource>();
+		if (_audio == null)
+		{
+			Debug.LogError("Security Guard missing AudioSource.");
+		}
 	}
 
 
@@ -58,10 +67,12 @@ public class GuardAI : MonoBehaviour
 			if (distance < 4f)
 			{
 				_anim.SetBool("isWalking", false);
+				_isWalking = false;
 			}
 			else
 			{
 				_anim.SetBool("isWalking", true);
+				_isWalking = true;
 			}
 		}
 		else if (_reactToCoin == false || _coinTossed == false)
@@ -76,10 +87,12 @@ public class GuardAI : MonoBehaviour
 				if (distance < 1f && (_currentTarget == 0 || _currentTarget == _waypoints.Count - 1))
 				{
 					_anim.SetBool("isWalking", false);
+					_isWalking = false;
 				}
 				else
 				{
 					_anim.SetBool("isWalking", true);
+					_isWalking = true;
 				}
 
 				if (distance < 1f && _targetReached == false)
@@ -91,6 +104,16 @@ public class GuardAI : MonoBehaviour
 						StartCoroutine(WaitBeforeMoving());
 					}
 				}
+			}
+		}
+
+		if (_isWalking)
+		{
+			_timeSinceLastStepPlayed += Time.deltaTime;
+			if (_timeSinceLastStepPlayed > 1.2f)
+			{
+				_timeSinceLastStepPlayed = 0;
+				_audio.Play();
 			}
 		}
 	}
