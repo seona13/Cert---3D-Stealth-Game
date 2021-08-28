@@ -1184,6 +1184,8 @@ PlayableDirector:
     value: {fileID: 964221742}
   - key: {fileID: 2907129794850319258, guid: 1f4cabdf82380044ba8a0e9b0823e4ba, type: 2}
     value: {fileID: 1269532811}
+  - key: {fileID: -4122853689403597010, guid: 1f4cabdf82380044ba8a0e9b0823e4ba, type: 2}
+    value: {fileID: 1861462061}
   m_ExposedReferences:
     m_References:
     - 0c30ff651c9b9d34f8a1a7d6183cf0e0: {fileID: 788987835}
@@ -10030,6 +10032,8 @@ PlayableDirector:
     value: {fileID: 2104999525}
   - key: {fileID: -7026458060453369739, guid: 89b6c00c8cc674f47b24b9499f4d2bb6, type: 2}
     value: {fileID: 1269532811}
+  - key: {fileID: -6872547005545318649, guid: 89b6c00c8cc674f47b24b9499f4d2bb6, type: 2}
+    value: {fileID: 1861462061}
   m_ExposedReferences:
     m_References:
     - b9ef511c11a15ce4f914f0880a684e43: {fileID: 528355716}
@@ -22058,7 +22062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &770617976
 Transform:
   m_ObjectHideFlags: 0
@@ -22118,6 +22122,8 @@ PlayableDirector:
     value: {fileID: 582604216}
   - key: {fileID: 7099512460385001773, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
     value: {fileID: 940286539}
+  - key: {fileID: -1519152172238485383, guid: ad10ccb5b22a9474a81dab6ffb93a26e, type: 2}
+    value: {fileID: 1861462061}
   m_ExposedReferences:
     m_References:
     - 72e0bb78504c6b34c8c1d15c5bd2d95e: {fileID: 1189946315}
@@ -22288,6 +22294,8 @@ PlayableDirector:
     value: {fileID: 582604216}
   - key: {fileID: 7116291221092014984, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
     value: {fileID: 775867231}
+  - key: {fileID: 6325937860100234149, guid: 82eb90a990298e94f8574ffd67704c35, type: 2}
+    value: {fileID: 1861462061}
   m_ExposedReferences:
     m_References:
     - cb4792c0c833c8e40807cc7a5ac3d29a: {fileID: 1106260935}
@@ -42805,6 +42813,45 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1851979956}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1861462061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861462062}
+  - component: {fileID: 1861462063}
+  m_Layer: 0
+  m_Name: CutsceneAudioListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1861462062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861462061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2043896034}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1861462063
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861462061}
+  m_Enabled: 1
 --- !u!1001 &1864232329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51827,7 +51874,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 65
+  field of view: 55
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -51852,10 +51899,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043896029}
-  m_LocalRotation: {x: -0.09381849, y: 0.888621, z: -0.21014318, w: -0.39672515}
-  m_LocalPosition: {x: 1.3266225, y: 1.9662266, z: -106.836}
+  m_LocalRotation: {x: -0.08223215, y: 0.8904478, z: 0.1783626, w: 0.41052085}
+  m_LocalPosition: {x: 3.9130092, y: 0.05837202, z: -62.691727}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1861462062}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
